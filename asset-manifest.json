@@ -1,16 +1,15 @@
 {
   "files": {
-    "main.css": "/nogginy/static/css/main.073c9b0a.css",
-    "main.js": "/nogginy/static/js/main.d3f6dfc2.js",
+    "main.css": "/nogginy/static/css/main.ed9095ef.css",
+    "main.js": "/nogginy/static/js/main.f4a7febe.js",
     "static/js/787.24d13de1.chunk.js": "/nogginy/static/js/787.24d13de1.chunk.js",
-    "static/media/logo.svg": "/nogginy/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/nogginy/index.html",
-    "main.073c9b0a.css.map": "/nogginy/static/css/main.073c9b0a.css.map",
-    "main.d3f6dfc2.js.map": "/nogginy/static/js/main.d3f6dfc2.js.map",
+    "main.ed9095ef.css.map": "/nogginy/static/css/main.ed9095ef.css.map",
+    "main.f4a7febe.js.map": "/nogginy/static/js/main.f4a7febe.js.map",
     "787.24d13de1.chunk.js.map": "/nogginy/static/js/787.24d13de1.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.073c9b0a.css",
-    "static/js/main.d3f6dfc2.js"
+    "static/css/main.ed9095ef.css",
+    "static/js/main.f4a7febe.js"
   ]
 }
