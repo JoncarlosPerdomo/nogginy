@@ -1,23 +1,71 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { useState } from "react";
 
 function App() {
+  const [userData, setUserData] = useState({ name: "Joncarlos Perdomo" });
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+    <div>
+      <h1>Welcome, {userData.name}!</h1>
+      <h2 id="teamname">nogginy</h2>
+      {/* <img
+        src={userData.img}
+        className="custom"
+        alt="Pic"
+        width="300"
+        height="300"
+      /> */}
+      <div className="colors">
+        <button
+          type="button"
+          className="color mint"
+          // onClick={() => colorHandler("mint")}
         >
-          Learn React
-        </a>
-      </header>
+          white
+        </button>
+        <button
+          type="button"
+          className="color red"
+          // onClick={() => colorHandler("red")}
+        >
+          red
+        </button>
+        <button
+          type="button"
+          className="color blue"
+          // onClick={() => colorHandler("blue")}
+        >
+          blue
+        </button>
+        <button
+          type="button"
+          className="color yellow"
+          // onClick={() => colorHandler("yellow")}
+        >
+          yellow
+        </button>
+        <button
+          type="button"
+          className="color pink"
+          // onClick={() => colorHandler("pink")}
+        >
+          {" "}
+          pink{" "}
+        </button>
+      </div>
+      <button
+        type="button"
+        className="button"
+        // onClick={() => gameModeHandler("single")}
+      >
+        Single
+      </button>
+      <button
+        type="button"
+        className="button"
+        // onClick={() => gameModeHandler("multiplayer")}
+      >
+        Multiplayer
+      </button>
     </div>
   );
 }
