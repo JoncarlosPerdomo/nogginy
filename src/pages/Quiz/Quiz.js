@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import QuizQuestions from "./QuizQuestions/QuizQuestions";
 import CategorySelection from "./CategorySelection";
 // import PropTypes from "prop-types";
