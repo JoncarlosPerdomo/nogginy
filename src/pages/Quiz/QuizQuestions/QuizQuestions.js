@@ -1,11 +1,13 @@
 /* eslint-disable react/jsx-key */
 import React, { useEffect, useState } from "react";
 import PropTypes from "prop-types";
+import { useNavigate } from "react-router-dom";
 import useFetch from "../../../hooks/useFetch";
 
 const QuizQuestions = (props) => {
   // const [questions, setQuestions] = useState("");
   let API_URL = `https://opentdb.com/api.php?amount=10`;
+  const navigate = useNavigate();
 
   if (props.category) {
     API_URL = API_URL.concat("&category=", props.category);
@@ -40,7 +42,12 @@ const QuizQuestions = (props) => {
   };
 
   return isFinished ? (
-    <div>{correctAnswer ? <h2>Correct</h2> : <h2>Incorrect</h2>}</div>
+    <div>
+      {correctAnswer ? <h2>Correct</h2> : <h2>Incorrect</h2>}
+      <button type="button" className="button" onClick={() => navigate("/")}>
+        Reset
+      </button>
+    </div>
   ) : (
     <div className="App">
       {loading && <div>A moment please...</div>}

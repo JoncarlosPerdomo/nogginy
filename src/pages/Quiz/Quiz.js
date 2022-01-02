@@ -45,10 +45,6 @@ const Quiz = () => {
         >
           Play Game
         </button>
-        <h2>
-          Category: {category}
-          Difficulty: {difficulty}
-        </h2>
       </div>
     </div>
   );

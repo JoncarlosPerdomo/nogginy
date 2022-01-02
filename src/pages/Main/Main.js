@@ -1,8 +1,10 @@
 import React from "react";
 import { ColorSelection } from "./ColorSelection";
-import PropTypes from "prop-types";
+import { useNavigate } from "react-router-dom";
 
-const Main = (props) => {
+const Main = () => {
+  const navigate = useNavigate();
+
   return (
     <div>
       <h1>Welcome, Joncarlos!</h1>
@@ -18,7 +20,7 @@ const Main = (props) => {
       <button
         type="button"
         className="button"
-        onClick={() => props.setMode("single")}
+        onClick={() => navigate("/nogginy/quiz")}
       >
         Single
       </button>
@@ -31,10 +33,6 @@ const Main = (props) => {
       </button>
     </div>
   );
-};
-
-Main.propTypes = {
-  setMode: PropTypes.func.isRequired,
 };
 
 export default Main;
