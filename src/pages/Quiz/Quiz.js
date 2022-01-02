@@ -10,6 +10,7 @@ const Quiz = () => {
   // Sets the category of the game to the one specified by the user
   const categoryHandler = (event) => {
     setCategory(event.target.value);
+    console.log(event);
   };
 
   // Sets the difficulty of the game to the one specified by the user
@@ -17,7 +18,7 @@ const Quiz = () => {
     setDifficulty(event.target.value);
   };
   return gameStart ? (
-    <QuizQuestions />
+    <QuizQuestions category={category} difficulty={difficulty} />
   ) : (
     <div className="display">
       <div className="main">

@@ -1,15 +1,21 @@
 /* eslint-disable react/jsx-key */
 import React, { useEffect, useState } from "react";
-// import PropTypes from "prop-types";
+import PropTypes from "prop-types";
 import useFetch from "../../../hooks/useFetch";
 
-const QuizQuestions = () => {
+const QuizQuestions = (props) => {
   // const [questions, setQuestions] = useState("");
-  const { loading, error, value } = useFetch(
-    `https://opentdb.com/api.php?amount=10`,
-    {},
-    []
-  );
+  let API_URL = `https://opentdb.com/api.php?amount=10`;
+
+  if (props.category) {
+    API_URL = API_URL.concat("&category=", props.category);
+    console.log(API_URL);
+  }
+  if (props.difficulty) {
+    API_URL = API_URL.concat("&difficulty=", props.difficulty);
+    console.log(API_URL);
+  }
+  const { loading, error, value } = useFetch(API_URL, {}, []);
   const [isFinished, setIsFinished] = useState(false);
   const [correctAnswer, setCorrectAnswer] = useState(false);
   // const [incorrectAnswer, setIncorrectAnswer] = useState();
@@ -55,13 +61,15 @@ const QuizQuestions = () => {
           </h3>
           {value.results[0].incorrect_answers.map((answer) => {
             return (
-              <button
-                type="button"
-                className="button"
-                onClick={() => handleAnswerChoiceClick(answer)}
-              >
-                {answer}
-              </button>
+              <>
+                <button
+                  type="button"
+                  className="button"
+                  onClick={() => handleAnswerChoiceClick(answer)}
+                >
+                  {answer}
+                </button>
+              </>
             );
           })}
           <button
@@ -79,6 +87,9 @@ const QuizQuestions = () => {
   );
 };
 
-// QuizQuestions.propTypes = {};
+QuizQuestions.propTypes = {
+  category: PropTypes.string,
+  difficulty: PropTypes.string,
+};
 
 export default QuizQuestions;
