@@ -1,8 +1,8 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import "./App.css";
-import Main from "./pages/Main/Main";
-import NotFound from "./pages/NotFound/NotFound";
-import Quiz from "./pages/Quiz/Quiz";
+import Main from "./pages/Main";
+import NotFound from "./pages/NotFound";
+import Quiz from "./pages/Quiz";
 
 function App() {
   return (

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import QuizQuestions from "./QuizQuestions/QuizQuestions";
+import QuizQuestions from "./QuizQuestions";
 import CategorySelection from "./CategorySelection";
 // import PropTypes from "prop-types";
 
@@ -10,16 +10,17 @@ const Quiz = () => {
   // Sets the category of the game to the one specified by the user
   const categoryHandler = (event) => {
     setCategory(event.target.value);
-    console.log(event);
   };
 
   // Sets the difficulty of the game to the one specified by the user
   const difficultyHandler = (event) => {
     setDifficulty(event.target.value);
   };
-  return gameStart ? (
-    <QuizQuestions category={category} difficulty={difficulty} />
-  ) : (
+
+  if (gameStart) {
+    return <QuizQuestions category={category} difficulty={difficulty} />;
+  }
+  return (
     <div className="display">
       <div className="main">
         <label htmlFor="trivia_difficulty">Choose a Difficulty:</label>

@@ -1,37 +1,28 @@
 /* eslint-disable react/jsx-key */
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import PropTypes from "prop-types";
 import { useNavigate } from "react-router-dom";
 import useFetch from "../../../hooks/useFetch";
 
-const QuizQuestions = (props) => {
-  // const [questions, setQuestions] = useState("");
+const getApiUrl = (props) => {
   let API_URL = `https://opentdb.com/api.php?amount=10`;
-  const navigate = useNavigate();
 
   if (props.category) {
     API_URL = API_URL.concat("&category=", props.category);
-    console.log(API_URL);
   }
   if (props.difficulty) {
     API_URL = API_URL.concat("&difficulty=", props.difficulty);
-    console.log(API_URL);
   }
-  const { loading, error, value } = useFetch(API_URL, {}, []);
+  return API_URL;
+};
+
+const QuizQuestions = (props) => {
   const [isFinished, setIsFinished] = useState(false);
   const [correctAnswer, setCorrectAnswer] = useState(false);
+  // const [questions, setQuestions] = useState("");
+  const navigate = useNavigate();
+  const { loading, error, value } = useFetch(getApiUrl(props), {}, []);
   // const [incorrectAnswer, setIncorrectAnswer] = useState();
-
-  useEffect(() => {
-    if (value && typeof value === "object") {
-      // value.map((elem) => console.log(elem));
-      console.log(value);
-    }
-    // return () => {
-    //   cleanup
-    // }
-  }, [value]);
-
   // function getAnswers(props) {}
 
   const handleAnswerChoiceClick = (answer) => {
