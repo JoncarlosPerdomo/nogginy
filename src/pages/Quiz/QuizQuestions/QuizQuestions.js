@@ -70,17 +70,16 @@ const QuizQuestions = (props) => {
               .replace(/&ldquo;/g, '"')
               .replace(/&rdquo;/g, '"')}
           </h3>
-          {value.results[0].incorrect_answers.map((answer) => {
+          {value.results[0].incorrect_answers.map((answer, index) => {
             return (
-              <>
-                <button
-                  type="button"
-                  className="button"
-                  onClick={() => handleAnswerChoiceClick(answer)}
-                >
-                  {answer}
-                </button>
-              </>
+              <button
+                type="button"
+                className="button"
+                key={index}
+                onClick={() => handleAnswerChoiceClick(answer)}
+              >
+                {answer}
+              </button>
             );
           })}
           <button
