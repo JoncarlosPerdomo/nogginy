@@ -8,7 +8,7 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route exact path="/" element={<Main />} />
+        <Route exact path="nogginy" element={<Main />} />
         <Route path="nogginy/quiz" element={<Quiz />} />
         <Route path="*" element={<NotFound />} />
       </Routes>

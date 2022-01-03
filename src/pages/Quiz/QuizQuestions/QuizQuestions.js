@@ -44,7 +44,11 @@ const QuizQuestions = (props) => {
   return isFinished ? (
     <div>
       {correctAnswer ? <h2>Correct</h2> : <h2>Incorrect</h2>}
-      <button type="button" className="button" onClick={() => navigate("/")}>
+      <button
+        type="button"
+        className="button"
+        onClick={() => navigate("/nogginy")}
+      >
         Reset
       </button>
     </div>
