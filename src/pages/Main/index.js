@@ -6,9 +6,9 @@ const Main = () => {
   const navigate = useNavigate();
 
   return (
-    <div>
+    <div className="pt-20">
       <h1>Welcome, Joncarlos!</h1>
-      <h2 id="teamname">nogginy</h2>
+      <h2 className="absolute top-0 left-0">nogginy</h2>
       {/* <img
         src={userData.img}
         className="custom"
