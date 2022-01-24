@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Catamaran:wght@900&display=swap");
 body {
-  background-color: #31a9e2;
   font-family: "Catamaran", sans-serif;
 }
 
@@ -115,59 +114,6 @@ button {
   margin-bottom: 40px;
 }
 
-.color {
-  font-size: 0px;
-  min-width: 30px;
-  min-height: 30px;
-  margin: 0 20px 0 20px;
-  border-radius: 50%;
-  border: 5px solid white;
-  zoom: 1;
-  transition: 0.5s ease-out;
-}
-
-.color:hover {
-  border: 1px solid white;
-  zoom: 1.5;
-  background-color: white;
-}
-
-.lightblue {
-  background-color: #31a9e2;
-}
-
-.red {
-  background-color: red;
-}
-
-.yellow {
-  background-color: #ffcd46;
-}
-
-.mint {
-  background-color: #92ff67;
-}
-
-.pink {
-  background-color: pink;
-}
-
-.blue {
-  background-color: blue;
-}
-
-.purple {
-  background-color: purple;
-}
-
-.orange {
-  background-color: orange;
-}
-
-.indigo {
-  background-color: indigo;
-}
-
 body {
   /*background-color: lightblue;*/
   color: white;
@@ -176,12 +122,4 @@ body {
   text-align: center;
   position: relative;
   top: 80px;
-}
-
-h1 {
-  font-size: 70px;
-}
-
-h2 {
-  font-size: 30px;
 }

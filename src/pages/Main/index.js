@@ -7,8 +7,8 @@ const Main = () => {
 
   return (
     <div className="pt-20">
-      <h1>Welcome, Joncarlos!</h1>
-      <h2 className="absolute top-0 left-0">nogginy</h2>
+      <h1 className="text-5xl text-white text-center">Welcome, Joncarlos!</h1>
+      <h2 className="absolute top-0 left-0 text-white">nogginy</h2>
       {/* <img
         src={userData.img}
         className="custom"
