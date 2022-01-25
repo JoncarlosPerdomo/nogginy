@@ -23,7 +23,9 @@ const Quiz = () => {
   return (
     <div className="display">
       <div className="main">
-        <label htmlFor="trivia_difficulty">Choose a Difficulty:</label>
+        <label className="text-white" htmlFor="trivia_difficulty">
+          Choose a Difficulty:
+        </label>
         <select
           onChange={difficultyHandler}
           name="trivia_difficulty"
@@ -35,7 +37,9 @@ const Quiz = () => {
           <option value="hard">Hard</option>
         </select>
 
-        <label htmlFor="trivia_category">Choose a Category:</label>
+        <label className="text-white" htmlFor="trivia_category">
+          Choose a Category:
+        </label>
 
         <CategorySelection categoryHandler={categoryHandler} />
 

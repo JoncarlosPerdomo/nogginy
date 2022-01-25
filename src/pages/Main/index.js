@@ -8,7 +8,7 @@ const Main = () => {
   return (
     <div className="pt-20">
       <h1 className="text-5xl text-white text-center">Welcome, Joncarlos!</h1>
-      <h2 className="absolute top-0 left-0 text-white">nogginy</h2>
+      <h2 className="absolute top-0 left-0 text-white text-2xl">nogginy</h2>
       {/* <img
         src={userData.img}
         className="custom"
@@ -17,20 +17,22 @@ const Main = () => {
         height="300"
       /> */}
       <ColorSelection />
-      <button
-        type="button"
-        className="button"
-        onClick={() => navigate("/nogginy/quiz")}
-      >
-        Single
-      </button>
-      <button
-        type="button"
-        className="button"
-        // onClick={() => gameModeHandler("multiplayer")}
-      >
-        Multiplayer
-      </button>
+      <div className="text-center">
+        <button
+          type="button"
+          className="button"
+          onClick={() => navigate("/nogginy/quiz")}
+        >
+          Single
+        </button>
+        <button
+          type="button"
+          className="button"
+          // onClick={() => gameModeHandler("multiplayer")}
+        >
+          Multiplayer
+        </button>
+      </div>
     </div>
   );
 };

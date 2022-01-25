@@ -33,11 +33,15 @@ const QuizQuestions = (props) => {
   };
 
   return isFinished ? (
-    <div>
-      {correctAnswer ? <h2>Correct</h2> : <h2>Incorrect</h2>}
+    <div className="text-center">
+      {correctAnswer ? (
+        <h2 className="text-white text-2xl">Correct</h2>
+      ) : (
+        <h2 className="text-white text-2xl">Incorrect</h2>
+      )}
       <button
         type="button"
-        className="button"
+        className="text-white text-xl outline outline-4 outline-offset-8 rounded-sm m-4 hover:bg-white hover:text-sky-400 hover:outline hover:outline-4 hover:outline-offset-8 hover:outline-sky-400"
         onClick={() => navigate("/nogginy")}
       >
         Reset
@@ -50,7 +54,7 @@ const QuizQuestions = (props) => {
         <div>{`There is a problem fetching the post data - ${error}`}</div>
       )}
       {value && (
-        <>
+        <div className="text-white text-center text-2xl pt-20">
           <h3>
             {value.results[0].question
               .replace(/&amp;/g, "&")
@@ -82,7 +86,7 @@ const QuizQuestions = (props) => {
           >
             {value.results[0].correct_answer}
           </button>
-        </>
+        </div>
       )}
     </div>
   );

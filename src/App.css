@@ -113,13 +113,3 @@ button {
 .colors {
   margin-bottom: 40px;
 }
-
-body {
-  /*background-color: lightblue;*/
-  color: white;
-  /*font-family: Avantgarde, sans-serif;*/
-  font-weight: bold;
-  text-align: center;
-  position: relative;
-  top: 80px;
-}
